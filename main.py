@@ -54,6 +54,8 @@ if __name__ == '__main__':
     config = parser.parse_args()
     args = vars(config)
 
+    print("CUDA available: ", torch.cuda.is_available())
+
     print('------------ Options -------------')
     for k, v in sorted(args.items()):
         print('%s: %s' % (str(k), str(v)))

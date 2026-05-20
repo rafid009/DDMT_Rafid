@@ -207,9 +207,9 @@ class SWATSegLoader(Dataset):
         self.win_size = win_size
         self.scaler = StandardScaler()
 
-        train_data = np.load("data/swat/SWaT_minute_segments_normal.npy") # pd.read_csv(os.path.join(root_path, 'swat_train2.csv'))
-        test_data = np.load("data/swat/SWaT_minute_segments_anomaly.npy") # pd.read_csv(os.path.join(root_path, 'swat2.csv'))
-        labels = np.load("data/swat/SWaT_minute_segments_anomaly_labels.npy")# test_data.values[:, -1:]
+        train_data = np.load(root_path + "/SWaT_minute_segments_normal.npy") # pd.read_csv(os.path.join(root_path, 'swat_train2.csv'))
+        test_data = np.load(root_path + "/SWaT_minute_segments_anomaly.npy") # pd.read_csv(os.path.join(root_path, 'swat2.csv'))
+        labels = np.load(root_path + "/SWaT_minute_segments_anomaly_labels.npy")# test_data.values[:, -1:]
         # train_data = train_data.values[:, :-1]
         # test_data = test_data.values[:, :-1]
 
@@ -258,9 +258,9 @@ class SynthSegLoader(Dataset):
         self.win_size = win_size
         self.scaler = StandardScaler()
 
-        train_data = np.load("data/synth/X_train.npy") # pd.read_csv(os.path.join(root_path, 'swat_train2.csv'))
-        test_data = np.load("data/synth/X_test.npy") # pd.read_csv(os.path.join(root_path, 'swat2.csv'))
-        labels = np.load("data/synth/Y_test.npy")# test_data.values[:, -1:]
+        train_data = np.load(root_path + "/X_train.npy") # pd.read_csv(os.path.join(root_path, 'swat_train2.csv'))
+        test_data = np.load(root_path + "/X_test.npy") # pd.read_csv(os.path.join(root_path, 'swat2.csv'))
+        labels = np.load(root_path + "/Y_test.npy")# test_data.values[:, -1:]
         # train_data = train_data.values[:, :-1]
         # test_data = test_data.values[:, :-1]
 
