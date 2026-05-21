@@ -1,7 +1,7 @@
 import numpy as np
 
-dataset = 'swat'
-train_data_file =  "data/swat/SWaT_minute_segments_normal.npy"# "data/synth/X_train.npy" #
+dataset = 'synth' # 'swat'
+train_data_file =  "data/synth/X_train.npy"# "data/swat/SWaT_minute_segments_normal.npy" #
 train_data = np.load(train_data_file)
 
 print(f"train data: {train_data.shape}")
@@ -15,7 +15,7 @@ print(f"train data: {train_data.shape}")
 # np.save(f"data/{dataset}/std.npy", std)
 np.save(train_data_file, train_data)
 
-test_data_file = "data/swat/SWaT_minute_segments_anomaly.npy" #"data/synth/X_test.npy" #
+test_data_file = "data/synth/X_test.npy" # "data/swat/SWaT_minute_segments_anomaly.npy" #
 test_data = np.load(test_data_file)
 
 print(f"test data: {test_data.shape}")
@@ -26,7 +26,7 @@ test_data = np.nan_to_num(test_data, copy=True)
 print(f"test data: {test_data.shape}")
 np.save(test_data_file, test_data)
 
-label_data_file = "data/swat/SWaT_minute_segments_anomaly_labels.npy" #"data/synth/Y_test.npy"#
+label_data_file = "data/synth/Y_test.npy"# "data/swat/SWaT_minute_segments_anomaly_labels.npy" #
 label_data = np.load(label_data_file)
 
 print(f"label data: {label_data.shape}")
