@@ -149,7 +149,7 @@ class Solver(object):
         path = self.model_save_path
         if not os.path.exists(path):
             os.makedirs(path)
-        early_stopping = EarlyStopping(patience=5, verbose=True, dataset_name=self.dataset)
+        early_stopping = EarlyStopping(patience=600, verbose=True, dataset_name=self.dataset)
         train_steps = len(self.train_loader)
 
         diffusion_hyperparams = calc_diffusion_hyperparams(self.T, self.beta_0, self.beta_T)
